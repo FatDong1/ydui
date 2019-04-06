@@ -81,6 +81,16 @@
       "sort": "0",
       "showDemo": true,
       "author": ""
+    },
+    {
+      "version": "1.0.0",
+      "name": "Pasdfas",
+      "chnName": "asdfasd",
+      "desc": "asdfasdf",
+      "type": "component",
+      "sort": "0",
+      "showDemo": true,
+      "author": "sdfa"
     }
   ]
 }

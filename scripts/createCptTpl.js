@@ -200,7 +200,7 @@ function createDir() {
         }
     });
     // 添加跳转链接到introduce.md
-    const data = `\n[${newCpt.chnName}${newCpt.name}---${newCpt.desc}](../src/packages/${nameLc}/doc.md)`
+    const data = `\r\n\r\n[${newCpt.chnName}${newCpt.name}---${newCpt.desc}](../src/packages/${nameLc}/doc.md)`
     fs.appendFile(path.join(__dirname, '../docs/introduce.md'), data, function (err) {
         if (err) {
             console.log(err)
