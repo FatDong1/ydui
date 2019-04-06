@@ -71,6 +71,16 @@
       "sort": "0",
       "showDemo": true,
       "author": "ad"
+    },
+    {
+      "version": "1.0.0",
+      "name": "Aasd",
+      "chnName": "asdfa",
+      "desc": "asdfasdf",
+      "type": "component",
+      "sort": "0",
+      "showDemo": true,
+      "author": ""
     }
   ]
 }
