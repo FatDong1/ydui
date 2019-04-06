@@ -16,7 +16,7 @@
 │
 ├─doc.md                      组件文档。/docs/introduce.md将会跳转到这个md文件
 │
-├─demo.vue                    组件的demo页面，执行`npm run dev`后，点击对应组件会跳转到对应的demo页面
+└─demo.vue                    组件的demo页面，执行`npm run dev`后，点击对应组件会跳转到对应的demo页面
 ```
 
 ### 打包
