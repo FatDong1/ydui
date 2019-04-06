@@ -61,6 +61,16 @@
       "sort": "0",
       "showDemo": true,
       "author": "asd"
+    },
+    {
+      "version": "1.0.0",
+      "name": "Gasa",
+      "chnName": "哈哈",
+      "desc": "描述",
+      "type": "component",
+      "sort": "0",
+      "showDemo": true,
+      "author": "ad"
     }
   ]
 }
