@@ -51,6 +51,16 @@
       "showDemo": true,
       "star": 4,
       "author": "永无止晋"
+    },
+    {
+      "version": "1.0.0",
+      "name": "TextBox",
+      "chnName": "测试盒",
+      "desc": "哈哈哈啊哈",
+      "type": "component",
+      "sort": "0",
+      "showDemo": true,
+      "author": "asd"
     }
   ]
 }

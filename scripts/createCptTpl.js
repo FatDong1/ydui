@@ -137,15 +137,20 @@ function createVue() {
         let content = `<template>
     <div class="yd-${nameLc}"></div>
 </template>
+
 <script>
 export default {
     name:'yd-${nameLc}',
     props: {
+
     },
     data() {
-        return {};
+        return {
+
+        };
     },
     methods: {
+        
     }
 }
 </script>`;
@@ -164,7 +169,7 @@ export default {
 function createScss() {
     return new Promise((resolve, reject) => {
         const nameLc = newCpt.name.toLowerCase();
-        let content = `.yd-${nameLc}{
+        let content = `.yd-${nameLc} {
 
 }`;
         const dirPath = path.join(__dirname, `../src/packages/${nameLc}/`);
@@ -185,6 +190,23 @@ function createDir() {
     if (!fs.existsSync(destPath)) {
         fs.mkdirSync(destPath);
     }
+    const testPath = path.join(__dirname, '../src/packages/' + nameLc + '/__test__/');
+    if (!fs.existsSync(testPath)) {
+        fs.mkdirSync(testPath);
+    }
+    copy(path.join(__dirname, './__template__/__test__/*'), testPath , function (err, file) {
+        if (err) {
+            console.log('创建文件出错！');
+        }
+    });
+    // 添加跳转链接到introduce.md
+    const data = `[${newCpt.chnName}${newCpt.name}](../src/packages/${newCpt.name}/doc.md)`
+    fs.appendFile(path.join(__dirname, '../docs/introduce.md'), data, function (err) {
+        if (err) {
+            console.log(err)
+        }
+    })
+
     copy(path.join(__dirname, './__template__/**.*'), destPath, function (err, file) {
         if (err) {
             console.log('创建文件夹出错！');
