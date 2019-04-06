@@ -1,4 +1,4 @@
-@keyframes nutFadeIn {
+@keyframes ydFadeIn {
     from {
         opacity: 0;
     }
@@ -8,7 +8,7 @@
     }
 }
 
-@keyframes nutFadeOut {
+@keyframes ydFadeOut {
     from {
         opacity: 1;
     }
@@ -17,4 +17,4 @@
         opacity: 0;
     }
 }
-@include make-animation(nutFade);
+@include make-animation(ydFade);

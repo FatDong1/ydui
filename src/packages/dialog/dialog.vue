@@ -1,51 +1,51 @@
 <template>
   <div
-    :class="['nut-dialog-wrapper',customClass,{'nut-dialog-image-wrapper':type==='image'}]"
+    :class="['yd-dialog-wrapper',customClass,{'yd-dialog-image-wrapper':type==='image'}]"
     :id="id"
   >
-    <transition :name="animation?'nutFade':''">
+    <transition :name="animation?'ydFade':''">
       <div
-        :class="'nut-dialog-mask'"
+        :class="'yd-dialog-mask'"
         :style="{'background':maskBgStyle}"
         @click="modalClick"
         v-show="curVisible"
       ></div>
     </transition>
-    <transition :name="animation?'nutEase':''">
-      <div class="nut-dialog-box" v-show="curVisible" @click="modalClick">
-        <div class="nut-dialog" @click.stop>
-          <a href="javascript:;" v-if="closeBtn" @click="closeBtnClick" class="nut-dialog-close"></a>
+    <transition :name="animation?'ydEase':''">
+      <div class="yd-dialog-box" v-show="curVisible" @click="modalClick">
+        <div class="yd-dialog" @click.stop>
+          <a href="javascript:;" v-if="closeBtn" @click="closeBtnClick" class="yd-dialog-close"></a>
           <template v-if="type==='image'">
-            <a href="javascript:;" @click="imageLinkClick" class="nut-dialog-link">
-              <img :src="imgSrc" class="nut-dialog-image" alt>
+            <a href="javascript:;" @click="imageLinkClick" class="yd-dialog-link">
+              <img :src="imgSrc" class="yd-dialog-image" alt>
             </a>
           </template>
           <template v-else>
-            <div class="nut-dialog-body">
-              <span class="nut-dialog-title" v-html="title" v-if="title"></span>
-              <div class="nut-dialog-content" v-if="$slots.default" :style="{textAlign}">
+            <div class="yd-dialog-body">
+              <span class="yd-dialog-title" v-html="title" v-if="title"></span>
+              <div class="yd-dialog-content" v-if="$slots.default" :style="{textAlign}">
                 <slot></slot>
               </div>
               <div
-                class="nut-dialog-content"
+                class="yd-dialog-content"
                 v-html="content"
                 v-else-if="content"
                 :style="{textAlign}"
               ></div>
             </div>
-            <div class="nut-dialog-footer" v-if="!noFooter">
+            <div class="yd-dialog-footer" v-if="!noFooter">
               <button
-                class="nut-dialog-btn nut-dialog-cancel"
+                class="yd-dialog-btn yd-dialog-cancel"
                 v-if="!noCancelBtn"
                 @click="cancelBtnClick(cancelAutoClose)"
-              >{{cancelBtnTxt || nutTranslate('lang.dialog.cancelBtnTxt')}}</button>
+              >{{cancelBtnTxt || ydTranslate('lang.dialog.cancelBtnTxt')}}</button>
               <button
-                class="nut-dialog-btn nut-dialog-ok"
+                class="yd-dialog-btn yd-dialog-ok"
                 v-if="!noOkBtn"
                 :class="{'disabled':okBtnDisabled}"
                 :disabled="okBtnDisabled"
                 @click="okBtnClick"
-              >{{okBtnTxt || nutTranslate('lang.dialog.okBtnTxt')}}</button>
+              >{{okBtnTxt || ydTranslate('lang.dialog.okBtnTxt')}}</button>
             </div>
           </template>
         </div>
@@ -75,7 +75,7 @@ const lockMaskScroll = (bodyCls => {
 })("dialog-open");
 
 export default {
-  name: "nut-dialog",
+  name: "yd-dialog",
   mixins: [locale],
   props: {
     id: {

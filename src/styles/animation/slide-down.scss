@@ -1,4 +1,4 @@
-@keyframes nutSlideDownIn {
+@keyframes ydSlideDownIn {
     from {
         transform: translate3d(0, -100%, 0);
         visibility: visible;
@@ -9,7 +9,7 @@
     }
 }
 
-@keyframes nutSlideDownOut {
+@keyframes ydSlideDownOut {
     from {
         transform: translate3d(0, 0, 0);
     }
@@ -21,4 +21,4 @@
 }
 
 // 适合弹出通知 
-@include make-animation(nutSlideDown);
+@include make-animation(ydSlideDown);

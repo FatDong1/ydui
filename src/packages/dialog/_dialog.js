@@ -6,7 +6,7 @@ let DialogConstructor = Vue.extend(settings);
 let inst;
 
 let Dialog = function (options) {
-    options.id = options.id || 'nut-dialog-default-id';
+    options.id = options.id || 'yd-dialog-default-id';
     if (options.type === 'image' && typeof (options.closeBtn) === 'undefined'){
         options.closeBtn = true;
     }

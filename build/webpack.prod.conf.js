@@ -11,19 +11,19 @@ rimraf('./dist/sites/', function (err) {
     if (err) console.log(err);
 });
 
-rimraf('./dist/nutui.js', function (err) {
+rimraf('./dist/ydui.js', function (err) {
     if (err) console.log(err);
 });
 
-rimraf('./dist/nutui.css', function (err) {
+rimraf('./dist/ydui.css', function (err) {
     if (err) console.log(err);
 });
 
-rimraf('./dist/nutui.js.map', function (err) {
+rimraf('./dist/ydui.js.map', function (err) {
     if (err) console.log(err);
 });
 
-rimraf('./dist/nutui.css.map', function (err) {
+rimraf('./dist/ydui.css.map', function (err) {
     if (err) console.log(err);
 });
 
@@ -31,7 +31,7 @@ module.exports = merge(webpackBaseConf, {
     mode: 'production',
     devtool: 'source-map',
     entry: {
-        nutui: './src/nutui.js',
+        ydui: './src/ydui.js',
     },
     externals: {
         'vue': {
@@ -43,8 +43,8 @@ module.exports = merge(webpackBaseConf, {
     },
     output: {
         path: path.resolve(__dirname, '../dist/'),
-        filename: 'nutui.js',
-        library: 'nutui',
+        filename: 'ydui.js',
+        library: 'ydui',
         libraryTarget: 'umd',
         umdNamedDefine: true
     },

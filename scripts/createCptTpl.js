@@ -135,11 +135,11 @@ function createVue() {
     return new Promise((resolve, reject) => {
         const nameLc = newCpt.name.toLowerCase();
         let content = `<template>
-    <div class="nut-${nameLc}"></div>
+    <div class="yd-${nameLc}"></div>
 </template>
 <script>
 export default {
-    name:'nut-${nameLc}',
+    name:'yd-${nameLc}',
     props: {
     },
     data() {
@@ -164,7 +164,7 @@ export default {
 function createScss() {
     return new Promise((resolve, reject) => {
         const nameLc = newCpt.name.toLowerCase();
-        let content = `.nut-${nameLc}{
+        let content = `.yd-${nameLc}{
 
 }`;
         const dirPath = path.join(__dirname, `../src/packages/${nameLc}/`);

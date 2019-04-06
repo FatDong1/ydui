@@ -2,7 +2,7 @@ import { i18n } from '../../locales'
 
 export default {
     methods: {
-        nutTranslate() {
+        ydTranslate() {
             return i18n.apply(this, arguments)
         }
     }

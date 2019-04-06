@@ -1,10 +1,8 @@
 <template>
   <div class="demo-list-wrapper">
-    <a href="https://github.com/jdf2e/nutui/" target="_blank" class="github-btn">Github</a>
-
     <h1 class="logo"></h1>
-    <div class="version">NutUI 2.0</div>
-    <p>一套京东风格的移动端Vue组件库</p>
+    <div class="version">YdUI 1.0.0</div>
+    <p>移动端组件库</p>
     <div :class="['demo-list-box',{'unfold':foldStatus[item]}]" v-for="item in sorts" :key="item">
       <h4 @click="toggleFold(item)">
         {{oriSorts[item]}}
@@ -16,13 +14,12 @@
             <a :href="'./demo.html#/'+cpt.name">
               {{cpt.name}}
               <span>{{cpt.chnName}}</span>
-              <nut-rate class="cpt-rec" v-if="cpt.star" :total="5" :value="cpt.star" :size="8" :spacing="3" :readOnly="true"></nut-rate>
+              <yd-rate class="cpt-rec" v-if="cpt.star" :total="5" :value="cpt.star" :size="8" :spacing="3" :readOnly="true"></yd-rate>
             </a>
           </li>
         </template>
       </ul>
     </div>
-    <div id="demo-footer" @click="showCode">京东用户体验设计部（JDC） · 前端开发部</div>
   </div>
 </template>
 
@@ -36,21 +33,11 @@ export default {
       packages: {},
       sortedPackages: [],
       oriSorts: [],
-      sorts: [1, 2, 0, 3, 4, 5],
+      sorts: [1, 2, 0, 3, 4, 5, 6],
       foldStatus: []
     };
   },
   methods: {
-    showCode(){
-        this.$dialog({
-          type:"image",
-          link:"",
-          imgSrc:"https://img14.360buyimg.com/imagetools/s350x350_jfs/t1/23439/7/11643/155926/5c90d554E7f03c831/bd45cd0ee2daa2fa.jpg.dpg",
-          onClickImageLink(){
-            return false;  //返回false可阻止默认的链接跳转行为
-          }
-        });
-    },
     toggleFold(idx) {
       this.foldStatus.splice(idx, 1, !this.foldStatus[idx]);
       sessionStorage.setItem("foldStatus", JSON.stringify(this.foldStatus));

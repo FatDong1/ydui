@@ -4,12 +4,12 @@ body.dialog-open {
     position: fixed;
 }
 
-.nut-dialog-wrapper {
+.yd-dialog-wrapper {
     position: relative;
     z-index: $zindex-mask;
 }
 
-.nut-dialog-box {
+.yd-dialog-box {
     position: fixed;
     display: flex;
     align-items: center;
@@ -17,20 +17,20 @@ body.dialog-open {
     color: $normal-color;
 }
 
-.nut-dialog-mask,
-.nut-dialog-box {
+.yd-dialog-mask,
+.yd-dialog-box {
     left: 0;
     top: 0;
     right: 0;
     bottom: 0;
 }
 
-.nut-dialog-mask {
+.yd-dialog-mask {
     position: fixed;
     background: $mask-bg;
 }
 
-.nut-dialog {
+.yd-dialog {
     position: relative;
     width: 86%;
     max-height: 70vh;
@@ -41,7 +41,7 @@ body.dialog-open {
     flex-direction: column;
 }
 
-.nut-dialog-title {
+.yd-dialog-title {
     display: block;
     line-height: 1.5;
     color: $title-color;
@@ -54,7 +54,7 @@ body.dialog-open {
     // }
 }
 
-.nut-dialog-close {
+.yd-dialog-close {
     position: absolute;
     right: 0;
     top: 0;
@@ -70,8 +70,8 @@ body.dialog-open {
     }
 }
 
-.nut-dialog-image-wrapper {
-    .nut-dialog {
+.yd-dialog-image-wrapper {
+    .yd-dialog {
         width: auto;
         max-width: 80%;
         max-height: 75%;
@@ -80,7 +80,7 @@ body.dialog-open {
         display: inline-block;
         overflow: visible;
     }
-    .nut-dialog-close {
+    .yd-dialog-close {
         position: absolute;
         right: 0;
         top: -40px;
@@ -99,17 +99,17 @@ body.dialog-open {
     }
 }
 
-.nut-dialog-link {
+.yd-dialog-link {
     display: inline-block;
 }
 
-.nut-dialog-image {
+.yd-dialog-image {
     max-width: 100%;
     max-height: 100%;
     vertical-align: bottom;
 }
 
-.nut-dialog-body {
+.yd-dialog-body {
     box-sizing: border-box;
     padding: 30px 20px 20px;
     display: flex;
@@ -117,7 +117,7 @@ body.dialog-open {
     flex: 0 1 auto;
 }
 
-.nut-dialog-content {
+.yd-dialog-content {
     flex: 1;
     justify-content: center;
     overflow: auto;
@@ -127,7 +127,7 @@ body.dialog-open {
     -webkit-overflow-scrolling: touch;
 }
 
-.nut-dialog-footer {
+.yd-dialog-footer {
     height: 50px;
     width: 100%;
     line-height: 50px;
@@ -138,7 +138,7 @@ body.dialog-open {
     flex-direction: row;
 }
 
-.nut-dialog-btn {
+.yd-dialog-btn {
     display: block;
     width: 100%;
     height: 100%;
@@ -163,7 +163,7 @@ body.dialog-open {
     }
 }
 
-.nut-dialog-ok {
+.yd-dialog-ok {
     border-radius: 0 0 5px 0;
     background: $btn-gradient-bg;
     background-origin: border-box;
@@ -174,7 +174,7 @@ body.dialog-open {
     }
 }
 
-.nut-dialog-cancel {
+.yd-dialog-cancel {
     border-radius: 0 0 0 5px;
     border-top: 1px solid $light-color;
     background: #FFF;

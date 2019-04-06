@@ -1,8 +1,8 @@
 <template>
-    <div class="nut-rate">
+    <div class="yd-rate">
         <span 
-            class="nut-rate-item" 
-            :class="['nut-rate-item',{'nut-rate-active':n<=current}]" 
+            class="yd-rate-item" 
+            :class="['yd-rate-item',{'yd-rate-active':n<=current}]" 
             v-for="n in total" :key="n" @click="onClick($event,n)" 
             :style="{
                 'height':size+'px',
@@ -16,7 +16,7 @@
 <script>
 import  './rate.scss';
 export default {
-    name:'nut-rate',
+    name:'yd-rate',
     props: {
         total:{
             type:[String,Number],

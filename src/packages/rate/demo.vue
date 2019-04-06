@@ -2,51 +2,51 @@
     <div>
         <h4>基本用法</h4>
         <div>
-            <nut-cell>
-                <span slot="title"><nut-rate v-model="val"></nut-rate></span>
-            </nut-cell>
-            <nut-cell>
+            <yd-cell>
+                <span slot="title"><yd-rate v-model="val"></yd-rate></span>
+            </yd-cell>
+            <yd-cell>
                 <span slot="title">当前分数：{{val}}分</span>
-            </nut-cell>
+            </yd-cell>
         </div>
 
         <h4>只读</h4>
         <div>
-            <nut-cell>
-                <span slot="title"><nut-rate v-model="val2" :readOnly="true"></nut-rate></span>
-            </nut-cell>
-            <nut-cell>
+            <yd-cell>
+                <span slot="title"><yd-rate v-model="val2" :readOnly="true"></yd-rate></span>
+            </yd-cell>
+            <yd-cell>
                 <span slot="title">结果：{{val2}}</span>
-            </nut-cell>
+            </yd-cell>
         </div>
 
         <h4>自定义尺寸</h4>
         <div>
-            <nut-cell>
-                <span slot="title"><nut-rate
+            <yd-cell>
+                <span slot="title"><yd-rate
                 :size="30"
-                ></nut-rate></span>
-            </nut-cell>
+                ></yd-rate></span>
+            </yd-cell>
         </div>
 
         <h4>事件</h4>
         <div>
-            <nut-cell>
-                <span slot="title"><nut-rate @click="onClick"></nut-rate></span>
-            </nut-cell>
-            <nut-cell>
+            <yd-cell>
+                <span slot="title"><yd-rate @click="onClick"></yd-rate></span>
+            </yd-cell>
+            <yd-cell>
                 <span slot="title">结果：{{result}}</span>
-            </nut-cell>
+            </yd-cell>
         </div>
 
         <h4>自定义ICON</h4>
         <div>
-            <nut-cell>
-                <span slot="title"><nut-rate
+            <yd-cell>
+                <span slot="title"><yd-rate
                 :checkedIcon="icon1"
                 :uncheckedIcon="icon2"
-                ></nut-rate></span>
-            </nut-cell>
+                ></yd-rate></span>
+            </yd-cell>
         </div>
         
     </div>

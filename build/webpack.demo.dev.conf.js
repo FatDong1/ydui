@@ -1,7 +1,7 @@
 const path = require('path');
 const baseConf = require('./webpack.demo.base.conf.js');
 const merge = require('webpack-merge');
-const Carefree = require('@nutui/carefree');
+const Carefree = require('@ydui/carefree');
 
 
 module.exports = merge(baseConf, {
@@ -13,13 +13,13 @@ module.exports = merge(baseConf, {
     plugins:[
         new Carefree({
             upload: true,
-            publicPath: '//page.jd.com/exploit/nutui2/',
-            qrcodeUrl: 'http://page.jd.com/exploit/nutui2/demo.html',
+            publicPath: '//page.jd.com/exploit/ydui2/',
+            qrcodeUrl: 'http://page.jd.com/exploit/ydui2/demo.html',
             ftp: {
                 host: '192.168.181.73',
                 port: 3000,
                 source: 'dist/sites',
-                target: '/var/www/html/page.jd.com/exploit/nutui2/'
+                target: '/var/www/html/page.jd.com/exploit/ydui2/'
             }
         })
     ],

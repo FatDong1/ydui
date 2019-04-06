@@ -2,78 +2,78 @@
   <div class="demo-list">
     <h4>基本用法</h4>
     <div>
-      <nut-cell :isLink="true" :showIcon="true" @click.native="showDialog1">
+      <yd-cell :isLink="true" :showIcon="true" @click.native="showDialog1">
         <span slot="title">
           <label>自定义标题和内容</label>
         </span>
-      </nut-cell>
-      <nut-cell :isLink="true" :showIcon="true" @click.native="showDialog2">
+      </yd-cell>
+      <yd-cell :isLink="true" :showIcon="true" @click.native="showDialog2">
         <span slot="title">
           <label>只有标题</label>
         </span>
-      </nut-cell>
-      <nut-cell :isLink="true" :showIcon="true" @click.native="showDialog3">
+      </yd-cell>
+      <yd-cell :isLink="true" :showIcon="true" @click.native="showDialog3">
         <span slot="title">
           <label>只有内容</label>
         </span>
-      </nut-cell>
-      <nut-cell :isLink="true" :showIcon="true" @click.native="showDialog4">
+      </yd-cell>
+      <yd-cell :isLink="true" :showIcon="true" @click.native="showDialog4">
         <span slot="title">
           <label>移除按钮栏</label>
         </span>
-      </nut-cell>
-      <nut-cell :isLink="true" :showIcon="true" @click.native="showDialog5">
+      </yd-cell>
+      <yd-cell :isLink="true" :showIcon="true" @click.native="showDialog5">
         <span slot="title">
           <label>事件</label>
         </span>
-      </nut-cell>
-      <nut-cell :isLink="true" :showIcon="true" @click.native="showDialog6">
+      </yd-cell>
+      <yd-cell :isLink="true" :showIcon="true" @click.native="showDialog6">
         <span slot="title">
           <label>无弹出动效</label>
         </span>
-      </nut-cell>
-      <nut-cell :isLink="true" :showIcon="true" @click.native="showDialog7">
+      </yd-cell>
+      <yd-cell :isLink="true" :showIcon="true" @click.native="showDialog7">
         <span slot="title">
           <label>遮罩层透明</label>
         </span>
-      </nut-cell>
+      </yd-cell>
     </div>
     <h4>图片弹窗</h4>
     <p>type值为“image”时为图片弹窗，需要配置一张图片，可带链接（非必须）。默认展示关闭按钮。点击图片触发onClickImageLink事件，返回false可阻止默认的跳转链接行为。</p>
     <div>
-      <nut-cell :isLink="true" :showIcon="true" @click.native="showImageDialog">
+      <yd-cell :isLink="true" :showIcon="true" @click.native="showImageDialog">
         <span slot="title">
           <label>图片弹窗</label>
         </span>
-      </nut-cell>
+      </yd-cell>
     </div>
     <h4>背景滚动锁定</h4>
     <p>lockBgScroll值设为true时，可在弹窗出现时锁定页面滚动，且不影响窗体内部滚动。</p>
     <div>
-      <nut-cell :isLink="true" :showIcon="true" @click.native="showDialog8">
+      <yd-cell :isLink="true" :showIcon="true" @click.native="showDialog8">
         <span slot="title">
           <label>背景滚动锁定</label>
         </span>
-      </nut-cell>
-      <nut-cell :isLink="true" :showIcon="true" @click.native="showDialog9">
+      </yd-cell>
+      <yd-cell :isLink="true" :showIcon="true" @click.native="showDialog9">
         <span slot="title">
           <label>窗体内部滚动不影响页面滚动</label>
         </span>
-      </nut-cell>
+      </yd-cell>
     </div>
     <h4>高级用法</h4>
     <p>如果Dialog内容有复杂交互，可使用Dialog的标签式用法。</p>
     <div>
-      <nut-cell :isLink="true" :showIcon="true" @click.native="dialogShow=true">
+      <yd-cell :isLink="true" :showIcon="true" @click.native="dialogShow=true">
         <span slot="title">
           <label>以标签形式调用Dialog</label>
         </span>
-      </nut-cell>
+      </yd-cell>
     </div>
     <!-- 以标签形式调用Dialog -->
-    <nut-dialog title="标签形式调用" :visible="dialogShow" @close="dialogShow=false">
+    <yd-dialog title="标签形式调用" :visible="dialogShow" @close="dialogShow=false">
       <a href="javascript:;" @click="dialogShow=false" :noCancelBtn="true">点我可以直接关闭对话框</a>
-    </nut-dialog>
+    </yd-dialog>
   </div>
 </template>
 
@@ -119,7 +119,7 @@ export default {
         customClass: "my-dialog",
         title: "注册说明",
         content:
-          "原账号为您本人所有，建议直接登录或找回密码。原账号内的订单资产可能丢失，可联系京东客服找回。",
+          "原账号为您本人所有，建议直接登录或找回密码。原账号内的订单资产可能丢失，可联系客服找回。",
         closeBtn: true,
         noFooter: true
       };
@@ -156,7 +156,7 @@ export default {
         animation: false, //禁用弹出动效
         title: "注册说明",
         content:
-          "原账号为您本人所有，建议直接登录或找回密码。原账号内的订单资产可能丢失，可联系京东客服找回。"
+          "原账号为您本人所有，建议直接登录或找回密码。原账号内的订单资产可能丢失，可联系客服找回。"
       });
     },
     showDialog7: function() {
@@ -164,7 +164,7 @@ export default {
         maskBgStyle: "rgba(0,0,0,0)", //设置遮罩层背景透明
         title: "注册说明",
         content:
-          "原账号为您本人所有，建议直接登录或找回密码。原账号内的订单资产可能丢失，可联系京东客服找回。"
+          "原账号为您本人所有，建议直接登录或找回密码。原账号内的订单资产可能丢失，可联系客服找回。"
       });
     },
     showDialog8: function() {

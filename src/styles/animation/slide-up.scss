@@ -1,4 +1,4 @@
-@keyframes nutSlideUpIn {
+@keyframes ydSlideUpIn {
     from {
         transform: translate3d(0, 100%, 0);
         visibility: visible;
@@ -9,7 +9,7 @@
     }
 }
 
-@keyframes nutSlideUpOut {
+@keyframes ydSlideUpOut {
     from {
         transform: translate3d(0, 0, 0);
     }
@@ -20,4 +20,4 @@
     }
 }
 
-@include make-animation(nutSlideUp, $ease-in-out);
+@include make-animation(ydSlideUp, $ease-in-out);

@@ -5,7 +5,7 @@ const webpackBaseConf = require('./webpack.base.conf.js');
 const rimraf = require('rimraf');
 const merge = require('webpack-merge');
 
-rimraf('./dist/nutui.common.js', function (err) {
+rimraf('./dist/ydui.common.js', function (err) {
     if (err) console.log(err);
 });
 
@@ -13,7 +13,7 @@ module.exports = merge(webpackBaseConf, {
     mode: 'production',
     devtool: 'source-map',
     entry: {
-        nutui: './src/nutui.js',
+        ydui: './src/ydui.js',
     },
     externals: {
         'vue': {
@@ -25,8 +25,8 @@ module.exports = merge(webpackBaseConf, {
     },
     output: {
         path: path.resolve(__dirname, '../dist/'),
-        filename: 'nutui.common.js',
-        library: 'nutui',
+        filename: 'ydui.common.js',
+        library: 'ydui',
         libraryTarget: 'commonjs2',
         umdNamedDefine: true
     },

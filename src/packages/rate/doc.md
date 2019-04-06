@@ -5,47 +5,47 @@
 ## 基础用法
 
 ```html
-<nut-rate 
+<yd-rate 
     v-model="val"
 >
-</nut-rate>
+</yd-rate>
 ```
 
 只读
 ```html
-<nut-rate 
+<yd-rate 
     v-model="val"
     :readOnly="true"
 >
-</nut-rate>
+</yd-rate>
 ```
 
 
 绑定事件
 
 ```html
-<nut-rate 
+<yd-rate 
     @click="onClick"
 >
-</nut-rate>
+</yd-rate>
 ```
 
 自定义尺寸
 
 ```html
-<nut-rate 
+<yd-rate 
     :size="35"
 >
-</nut-rate>
+</yd-rate>
 ```
 
 自定义ICON
 
 ```html
-<nut-rate
+<yd-rate
     :checkedIcon="icon1"
     :uncheckedIcon="icon2"
-></nut-rate>
+></yd-rate>
 ```
 
 ## Prop

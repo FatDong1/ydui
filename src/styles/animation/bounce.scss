@@ -1,4 +1,4 @@
-@keyframes nutBounceIn {
+@keyframes ydBounceIn {
     from, 20%, 40%, 60%, 80%, to {
         animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
     }
@@ -31,7 +31,7 @@
     }
 }
 
-@keyframes nutBounceOut {
+@keyframes ydBounceOut {
     20% {
         transform: scale3d(.9, .9, .9);
     }
@@ -46,4 +46,4 @@
         transform: scale3d(.3, .3, .3);
     }
 }
-@include make-animation(nutBounce);
+@include make-animation(ydBounce);

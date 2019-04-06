@@ -1,15 +1,11 @@
 # 主题定制
 
-> 定制主题须使用 NutUI 2.0 以上版本
-
-NutUI 默认提供一套 UI 主题，同时允许在一定程度上定制新的主题，以满足业务的多样化视觉需求。
-
-![主题定制](http://img14.360buyimg.com/uba/jfs/t1/14893/39/4803/92712/5c3478afEc0458edb/54e06165a4445661.png)
+YdUI 默认提供一套 UI 主题，同时允许在一定程度上定制新的主题，以满足业务的多样化视觉需求。
 
 
 ## 样式变量
 
-NutUI 的样式是基于 **[SCSS](https://sass-lang.com/)** 开发的，定义了一套默认样式变量，定制主题就是编辑这个变量列表。
+YdUI 的样式是基于 **[SCSS](https://sass-lang.com/)** 开发的，定义了一套默认样式变量，定制主题就是编辑这个变量列表。
 
 以下是一些与颜色相关基本样式变量，所有可用的变量请参考配置文件。
 
@@ -33,7 +29,7 @@ $dark-color: #DADADA;
 
 ### 第二步：修改本地项目 webpack 的配置文件
 
-修改 webpack 配置文件中 **sass-loader** 的配置。在 **options** 的 **data** 属性值中，先后 import 你自定义的 SCSS 文件（如 `custom.scss`）和 NutUI 的样式变量配置文件（路径为 **dist/styles/variable.scss**）。
+修改 webpack 配置文件中 **sass-loader** 的配置。在 **options** 的 **data** 属性值中，先后 import 你自定义的 SCSS 文件（如 `custom.scss`）和 YdUI 的样式变量配置文件（路径为 **dist/styles/variable.scss**）。
 
 ```javascript
 {
@@ -42,7 +38,7 @@ $dark-color: #DADADA;
         {
             loader: 'sass-loader',
             options: {
-                data: `@import "./asset/css/custom.scss"; @import "@nutui/nutui/dist/styles/index.scss"; `,
+                data: `@import "./asset/css/custom.scss"; @import "@ydui/ydui/dist/styles/index.scss"; `,
             }
         }
     ]
@@ -53,18 +49,18 @@ $dark-color: #DADADA;
 
 在主题定制场景下，项目中引用组件时，需要引入 **SCSS** 文件，而不是 **CSS** 文件。分三种情况：
 
-1.引用完整组件库时，需要引入 **nutui.scss** 文件
+1.引用完整组件库时，需要引入 **ydui.scss** 文件
 
 ```javascript
-import NutUI from '@nutui/nutui';
-import '@nutui/nutui/dist/nutui.scss';
+import YdUI from '@ydui/ydui';
+import '@ydui/ydui/dist/ydui.scss';
 ```
 
 2.未使用插件，手动按需引用组件时，需手动引入组件对应的 SCSS 文件。
 
 ```javascript
-import Button from '@nutui/nutui/dist/packages/button/button.js';
-import '@nutui/nutui/dist/packages/button/button.scss';
+import Button from '@ydui/ydui/dist/packages/button/button.js';
+import '@ydui/ydui/dist/packages/button/button.scss';
 ```
 
 3.使用了插件 **[@nutui/babel-plugin-seperate-import](https://www.npmjs.com/package/@nutui/babel-plugin-separate-import)** 进行按需引用时，需修改 **.babelrc** 文件，将 **style** 的设置为 **scss**。该插件将会自动引入指定组件对应的 SCSS 文件。

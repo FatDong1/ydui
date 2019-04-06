@@ -4,7 +4,7 @@ const path = require('path');
 
 const rimraf = require('rimraf');
 
-rimraf('./dist/nutui.scss', function (err) {
+rimraf('./dist/ydui.scss', function (err) {
     if (err) console.log(err);
     let content = `$assetsPath:'./assets/';
 @import './styles/index.scss';`;
@@ -15,13 +15,13 @@ rimraf('./dist/nutui.scss', function (err) {
     });
 
     const dirPath = path.join(__dirname, `../dist/`);
-    const filePath = path.join(dirPath, `nutui.scss`);
+    const filePath = path.join(dirPath, `ydui.scss`);
     if (!fs.existsSync(dirPath)) {
         fs.mkdirSync(dirPath);
     }
 
     fs.writeFile(filePath, content, (err) => {
         if (err) throw err;
-        console.log(`生成nutui.scss文件成功`);
+        console.log(`生成ydui.scss文件成功`);
     });
 });

@@ -1,5 +1,5 @@
 @import "../../styles/animation/rotate";
-.nut-toast {
+.yd-toast {
     position: fixed;
     left: 0;
     bottom: 150px;
@@ -8,24 +8,24 @@
     pointer-events: none;
     z-index: 9999;
     font-family: $font-family;
-    &.nut-toast-small {
-        .nut-toast-inner {
+    &.yd-toast-small {
+        .yd-toast-inner {
             font-size: $font-size-small;
         }
     }
-    &.nut-toast-large {
-        .nut-toast-inner {
+    &.yd-toast-large {
+        .yd-toast-inner {
             font-size: $font-size-large;
         }
     }
-    &.nut-toast-cover {
+    &.yd-toast-cover {
         display: flex;
         align-items: center;
         justify-content: center;
         pointer-events: auto;
         height: 100%;
     }
-    .nut-toast-inner {
+    .yd-toast-inner {
         position: relative;
         display: inline-block;
         font-size: $font-size-base;
@@ -38,11 +38,11 @@
         border-radius: 7px;
         color: #fff;
     }
-    &.nut-toast-has-icon {
-        .nut-toast-inner {
+    &.yd-toast-has-icon {
+        .yd-toast-inner {
             padding: 70px 50px 30px;
         }
-        .nut-toast-icon-wrapper {
+        .yd-toast-icon-wrapper {
             position: absolute;
             left: 0;
             top: 20px;
@@ -52,7 +52,7 @@
             align-items: center;
             justify-content: center;
         }
-        .nut-toast-icon {
+        .yd-toast-icon {
             display: inline-block;
             width: 30px;
             height: 30px;
@@ -73,30 +73,30 @@
             }
         }
     }
-    &.nut-toast-center {
+    &.yd-toast-center {
         top: 50%;
         transform: translateY(-50%);
     }
-    &.nut-loading {
-        .nut-toast-inner {
+    &.yd-loading {
+        .yd-toast-inner {
             padding: 25px;
             display: inline-flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
         }
-        .nut-toast-icon-wrapper {
+        .yd-toast-icon-wrapper {
             position: static;
             height: 30px;
         }
-        .nut-toast-text:not(:empty) {
+        .yd-toast-text:not(:empty) {
             margin-top: 10px;
             margin-bottom: -10px;
         }
-        .nut-toast-icon {
+        .yd-toast-icon {
             width: 40px;
             height: 40px;
-            &.nut-toast-icon-rotate {
+            &.yd-toast-icon-rotate {
                 animation: rotation 2s linear infinite;
             }
         }

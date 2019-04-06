@@ -1,30 +1,30 @@
-.nut-cell {
+.yd-cell {
     display: block;
     padding: 0 10px;
     text-decoration: none;
     -webkit-tap-highlight-color: transparent;
     outline: none;
-    &.nut-cell-link:active {
+    &.yd-cell-link:active {
         background-color: $light-color !important;
     }
-    .nut-cell-box {
+    .yd-cell-box {
         display: flex;
         align-items: center;
         justify-content: space-between;
         min-height: 48px;
-        @include nut-cell-border;
+        @include yd-cell-border;
     }
-    .nut-cell-left {
+    .yd-cell-left {
         flex: 1;
         flex-direction: column;
     }
-    .nut-cell-title {
+    .yd-cell-title {
         display: block;
         line-height: $line-height-base;
         font-size: $font-size-base;
         color: $title-color;
     }
-    .nut-cell-sub-title {
+    .yd-cell-sub-title {
         display: block;
         line-height: 1;
         font-size: $font-size-small;
@@ -34,13 +34,13 @@
             display: none;
         }
     }
-    .nut-cell-right {
+    .yd-cell-right {
         display: flex;
         align-items: center;
         font-size: $font-size-small;
         color: $text-color;
     }
-    .nut-cell-icon {
+    .yd-cell-icon {
         display: flex;
         align-items: center;
         img {
@@ -49,13 +49,13 @@
         }
     }
     &:first-of-type {
-        @include nut-cell-border;
-        .nut-cell-box {
+        @include yd-cell-border;
+        .yd-cell-box {
             background-image: none;
         }
     }
     &:last-of-type {
-        @include nut-cell-border;
+        @include yd-cell-border;
         background-position: bottom;
     }
     &:only-of-type {

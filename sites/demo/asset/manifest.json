@@ -1,6 +1,6 @@
 {
-    "short_name": "NutUI",
-    "name": "一套京东风格的移动端Vue组件库",
+    "short_name": "YdUI",
+    "name": "移动端Vue组件库",
     "icons": [
         {
             "src": "/img/pwa_logo.png",

@@ -25,7 +25,7 @@ describe('Toast.vue', () => {
     // it('文案展示', () => {
     //     wrapper.setData({ msg: '测试文案', visible:true });
     //     return Vue.nextTick().then(function () {
-    //         expect(wrapper.find('.nut-toast-text').text()).toBe('测试文案');
+    //         expect(wrapper.find('.yd-toast-text').text()).toBe('测试文案');
     //     });
     // });
 
@@ -33,7 +33,7 @@ describe('Toast.vue', () => {
     //     wrapper.setData({ msg: '测试文案', visible: true, size: 'small' });
 
     //     return Vue.nextTick().then(function () {
-    //         expect(wrapper.contains('.nut-toast-small')).toBe(true);
+    //         expect(wrapper.contains('.yd-toast-small')).toBe(true);
     //     });
     // });
 
@@ -41,7 +41,7 @@ describe('Toast.vue', () => {
     //     wrapper.setData({ msg: '测试文案', visible: true, type:'success' });
 
     //     return Vue.nextTick().then(function () {
-    //         expect(wrapper.contains('.nut-toast-has-icon')).toBe(true);
+    //         expect(wrapper.contains('.yd-toast-has-icon')).toBe(true);
     //     });
     // });
 
@@ -49,7 +49,7 @@ describe('Toast.vue', () => {
     //     wrapper.setData({ msg: '测试文案', visible: true, type: 'loading' });
 
     //     return Vue.nextTick().then(function () {
-    //         expect(wrapper.contains('.nut-loading')).toBe(true);
+    //         expect(wrapper.contains('.yd-loading')).toBe(true);
     //     });
     // });
 
@@ -57,7 +57,7 @@ describe('Toast.vue', () => {
     //     wrapper.setData({ msg: '测试文案', visible: true, type: 'loading', loadingRotate:false });
 
     //     return Vue.nextTick().then(function () {
-    //         expect(wrapper.contains('.nut-toast-icon-rotate')).toBe(false);
+    //         expect(wrapper.contains('.yd-toast-icon-rotate')).toBe(false);
     //     });
     // });
 

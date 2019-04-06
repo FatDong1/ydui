@@ -5,36 +5,36 @@
 ## 基本用法
 
 ```html
-<nut-cell 
+<yd-cell 
   title = "左侧主标题" 
   subTitle = "左侧副标题"
   desc = "右侧描述文字"
   :showIcon = "true"
 >
-</nut-cell>
+</yd-cell>
 ```
 
 **isLink**值为true时有点击状态。
 
 ```html
-<nut-cell 
+<yd-cell 
   :isLink = "true"
   title = "左侧主标题"
   subTitle = "左侧副标题"
   desc="右侧描述文字">
-</nut-cell>
+</yd-cell>
 ```
 
 设置**linkUrl**，点击可跳转。
 
 ```html
-<nut-cell 
+<yd-cell 
   :isLink = "true"
   linkUrl = http://m.jd.com"
   title = "左侧主标题" 
   subTitle = "左侧副标题"
   desc="右侧描述文字">
-</nut-cell>
+</yd-cell>
 ```
 
 ## Prop

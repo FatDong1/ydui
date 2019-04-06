@@ -1,4 +1,4 @@
-@keyframes nutDropIn {
+@keyframes ydDropIn {
     0% {
         opacity: 0;
         transform: scaleY(0.8);
@@ -9,7 +9,7 @@
     }
 }
 
-@keyframes nutDropOut {
+@keyframes ydDropOut {
     0% {
         opacity: 1;
         transform: scaleY(1);
@@ -21,4 +21,4 @@
 }
 
 // select、dropdown
-@include make-animation(nutDrop);
+@include make-animation(ydDrop);

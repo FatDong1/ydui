@@ -13,7 +13,7 @@ this.$dialog({
 
 ## ID
 
-同一个页面中，id相同的Dialog的DOM只会同时存在一个，不指定id时，id的默认值为**nut-dialog-default-id**。
+同一个页面中，id相同的Dialog的DOM只会同时存在一个，不指定id时，id的默认值为**yd-dialog-default-id**。
 
 ```javascript
 this.$dialog({
@@ -82,9 +82,9 @@ this.$dialog({
 如果Dialog内容有复杂交互，可使用Dialog的标签式用法。
 
 ```html
-<nut-dialog title="标签形式调用" :visible="dialogShow" @close="dialogShow=false">
+<yd-dialog title="标签形式调用" :visible="dialogShow" @close="dialogShow=false">
     <a href="javascript:;" @click="dialogShow=false" :noCancelBtn="true">点我可以直接关闭对话框</a>
-</nut-dialog>
+</yd-dialog>
 ```
 
 ```javascript

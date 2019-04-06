@@ -8,18 +8,18 @@ const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const rimraf = require('rimraf');
 const merge = require('webpack-merge');
 
-rimraf('./dist/nutui.min.js', function (err) {
+rimraf('./dist/ydui.min.js', function (err) {
     if (err) console.log(err);
 });
 
-rimraf('./dist/nutui.min.css', function (err) {
+rimraf('./dist/ydui.min.css', function (err) {
     if (err) console.log(err);
 });
 
 module.exports = merge(webpackBaseConf, {
     mode: 'production',
     entry: {
-        nutui: './src/nutui.js',
+        ydui: './src/ydui.js',
     },
     externals: {
         'vue': {
@@ -31,8 +31,8 @@ module.exports = merge(webpackBaseConf, {
     },
     output: {
         path: path.resolve(__dirname, '../dist/'),
-        filename: 'nutui.min.js',
-        library: 'nutui',
+        filename: 'ydui.min.js',
+        library: 'ydui',
         libraryTarget: 'umd',
         umdNamedDefine: true
     },

@@ -56,7 +56,7 @@ function _getInstance(obj) {
 let Toast = {
   text(msg, obj) {
     if (!msg) {
-      console.warn('[NutUI Toast]: msg不能为空');
+      console.warn('[YdUI Toast]: msg不能为空');
       return;
     }
     obj = obj || {};
@@ -65,7 +65,7 @@ let Toast = {
   },
   success(msg, obj) {
     if (!msg) {
-      console.warn('[NutUI Toast]: msg不能为空');
+      console.warn('[YdUI Toast]: msg不能为空');
       return;
     }
     obj = obj || {};
@@ -75,7 +75,7 @@ let Toast = {
   },
   fail(msg, obj) {
     if (!msg) {
-      console.warn('[NutUI Toast]: msg不能为空');
+      console.warn('[YdUI Toast]: msg不能为空');
       return;
     }
     obj = obj || {};
@@ -85,7 +85,7 @@ let Toast = {
   },
   warn(msg, obj) {
     if (!msg) {
-      console.warn('[NutUI Toast]: msg不能为空');
+      console.warn('[YdUI Toast]: msg不能为空');
       return;
     }
     obj = obj || {};

@@ -13,18 +13,18 @@ describe('Rate.vue', () => {
     it('评分单元数量', () => {
         wrapper.setProps({ total: 6 });
         return Vue.nextTick().then(function () {
-            expect(wrapper.findAll('.nut-rate-item').length).toBe(6);
+            expect(wrapper.findAll('.yd-rate-item').length).toBe(6);
         })
     });
 
     it('仿造prop带入value', () => {
-        //expect(wrapper.findAll('.nut-rate-item').length).toBe(6);
-        expect(wrapper.findAll('.nut-rate-item').at(4).is('.nut-rate-active')).toBe(true)
+        //expect(wrapper.findAll('.yd-rate-item').length).toBe(6);
+        expect(wrapper.findAll('.yd-rate-item').at(4).is('.yd-rate-active')).toBe(true)
     });
     
     it('点击评分', () => {
-        wrapper.findAll('.nut-rate-item').at(2).trigger('click');
-        expect(wrapper.findAll('.nut-rate-item').at(2).is('.nut-rate-active')).toBe(true)
+        wrapper.findAll('.yd-rate-item').at(2).trigger('click');
+        expect(wrapper.findAll('.yd-rate-item').at(2).is('.yd-rate-active')).toBe(true)
     });
 
 });

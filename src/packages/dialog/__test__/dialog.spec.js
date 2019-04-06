@@ -11,8 +11,8 @@ describe('Dialog.vue', () => {
         wrapper.setProps({ title: '测试标题', visible: true });
 
         return Vue.nextTick().then(function () {
-            expect(wrapper.find('.nut-dialog-mask').isVisible()).toBe(true);
-            expect(wrapper.find('.nut-dialog-box').isVisible()).toBe(true);
+            expect(wrapper.find('.yd-dialog-mask').isVisible()).toBe(true);
+            expect(wrapper.find('.yd-dialog-box').isVisible()).toBe(true);
         })
     });
 
@@ -20,7 +20,7 @@ describe('Dialog.vue', () => {
         wrapper.setProps({ title: '测试标题', visible: false });
 
         return Vue.nextTick().then(function () {
-            expect(wrapper.find('.nut-dialog-box').isVisible()).toBe(false);
+            expect(wrapper.find('.yd-dialog-box').isVisible()).toBe(false);
         })
     });
 
@@ -28,7 +28,7 @@ describe('Dialog.vue', () => {
         wrapper.setProps({ content: '测试文案', visible:true });
 
         return Vue.nextTick().then(function () {
-            expect(wrapper.find('.nut-dialog-content').exists()).toBe(true);
+            expect(wrapper.find('.yd-dialog-content').exists()).toBe(true);
         })
     });
 
@@ -36,7 +36,7 @@ describe('Dialog.vue', () => {
         wrapper.setProps({ title: '测试标题', visible: true });
 
         return Vue.nextTick().then(function () {
-            expect(wrapper.find('.nut-dialog-title').exists()).toBe(true);
+            expect(wrapper.find('.yd-dialog-title').exists()).toBe(true);
         })
     });
 
@@ -44,7 +44,7 @@ describe('Dialog.vue', () => {
         wrapper.setProps({ title: '测试标题', visible: true, noFooter:true });
 
         return Vue.nextTick().then(function () {
-            expect(wrapper.find('.nut-dialog-footer').exists()).toBe(false);
+            expect(wrapper.find('.yd-dialog-footer').exists()).toBe(false);
         })
     }); 
 
@@ -52,7 +52,7 @@ describe('Dialog.vue', () => {
         wrapper.setProps({ title: '测试标题', visible: true, noOkBtn: true });
 
         return Vue.nextTick().then(function () {
-            expect(wrapper.find('.nut-dialog-ok').exists()).toBe(false);
+            expect(wrapper.find('.yd-dialog-ok').exists()).toBe(false);
         })
     });
 
@@ -64,10 +64,10 @@ describe('Dialog.vue', () => {
             imgSrc: "https://m.360buyimg.com/mobilecms/s750x750_jfs/t1/4875/23/1968/285655/5b9549eeE4997a18c/070eaf5bddf26be8.jpg", });
 
         return Vue.nextTick().then(function () {
-            expect(wrapper.find('.nut-dialog-link').exists()).toBe(true);
-            expect(wrapper.find('.nut-dialog-image').exists()).toBe(true);
-            expect(wrapper.find('.nut-dialog-image').attributes('src')).toBe('https://m.360buyimg.com/mobilecms/s750x750_jfs/t1/4875/23/1968/285655/5b9549eeE4997a18c/070eaf5bddf26be8.jpg');
-            expect(wrapper.find('.nut-dialog-body').exists()).toBe(false);
+            expect(wrapper.find('.yd-dialog-link').exists()).toBe(true);
+            expect(wrapper.find('.yd-dialog-image').exists()).toBe(true);
+            expect(wrapper.find('.yd-dialog-image').attributes('src')).toBe('https://m.360buyimg.com/mobilecms/s750x750_jfs/t1/4875/23/1968/285655/5b9549eeE4997a18c/070eaf5bddf26be8.jpg');
+            expect(wrapper.find('.yd-dialog-body').exists()).toBe(false);
             
         })
     });

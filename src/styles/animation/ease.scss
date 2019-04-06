@@ -1,5 +1,5 @@
 
-@keyframes nutEaseIn {
+@keyframes ydEaseIn {
     0% {
         opacity: 0;
         transform: scale(0.9);
@@ -10,7 +10,7 @@
     }
 }
 
-@keyframes nutEaseOut {
+@keyframes ydEaseOut {
     0% {
         opacity: 1;
         transform: scale(1);
@@ -21,4 +21,4 @@
     }
 }
 
-@include make-animation(nutEase);
+@include make-animation(ydEase);
