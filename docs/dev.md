@@ -63,6 +63,21 @@ SVG更适合移动端组件库
 - SVG样式控制比ICON FONT更灵活，甚至可以控制图标各个部分的颜色，实现彩色图标。而这对ICON FONT来说是不可能实现的
 - ICON FONT通常是用伪对象或伪类插入页面，其展示受到“line-height”、“vertical-align”、“letter-spacing”、“word-spacing”及字体相关CSS属性影响，也受到字体字符设计本身影响。而SVG在页面中就是一个标签，更方便控制，语义化也更好
 
+## css主题定制
+```scss
+// 路径/src/styles/variable.scss
+// ---- color ----
+$primary-color: #6dadff !default;
+$normal-color: #848484 !default;
+$link-color: $primary-color !default;
+$link-hover-color: mix($link-color, #000, 80%) !default;
+$title-color: #2D2D2D !default;
+$text-color: #848484 !default;
+$light-color: #F6F6F6 !default;
+$dark-color: #DADADA !default;
+// ...
+```
+
 ## webpack打包配置介绍
 ### 导出的模块化
 `output.libraryTarget`的值设为`umd`。
