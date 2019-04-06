@@ -1,3 +1,3 @@
-import * as NutUI from './ydui'
-export default NutUI
+import * as YdUI from './ydui'
+export default YdUI
 export * from './ydui'

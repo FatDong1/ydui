@@ -1,7 +1,6 @@
 const path = require('path');
 const baseConf = require('./webpack.demo.base.conf.js');
 const merge = require('webpack-merge');
-const Carefree = require('@ydui/carefree');
 
 
 module.exports = merge(baseConf, {
@@ -11,17 +10,7 @@ module.exports = merge(baseConf, {
     },
     devtool: 'cheap-module-eval-source-map',
     plugins:[
-        new Carefree({
-            upload: true,
-            publicPath: '//page.jd.com/exploit/ydui2/',
-            qrcodeUrl: 'http://page.jd.com/exploit/ydui2/demo.html',
-            ftp: {
-                host: '192.168.181.73',
-                port: 3000,
-                source: 'dist/sites',
-                target: '/var/www/html/page.jd.com/exploit/ydui2/'
-            }
-        })
+
     ],
     devServer: {
         contentBase: path.resolve(__dirname, 'dist/sites/'),

@@ -85,9 +85,6 @@ module.exports = {
             },]
     },
     plugins: [
-        new webpack.BannerPlugin({
-            banner: "NutUI2(" + config.version + ") - [filebase], [hash], " + moment().format()
-        }),
         new VueLoaderPlugin()
     ],
 }

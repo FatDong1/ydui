@@ -1,6 +1,6 @@
 # 国际化
 
-NutUI 2.0 以上版本支持多语言。组件默认使用中文，支持加载其他语言包来实现多语言切换功能。除了组件本身的语言切换以外，用户还可以调用相关的语言转换方法来支持其他功能的国际化。具体使用方法如下：
+组件默认使用中文，支持加载其他语言包来实现多语言切换功能。除了组件本身的语言切换以外，用户还可以调用相关的语言转换方法来支持其他功能的国际化。具体使用方法如下：
 
 ## 使用方法
 
@@ -8,11 +8,11 @@ NutUI 2.0 以上版本支持多语言。组件默认使用中文，支持加载�
 
 ```javascript
 import Vue from 'vue';
-import NutUI from '@nutui/nutui';
+import YdUI from '@ydui/ydui';
 
-import enUS from '@nutui/nutui/dist/locales/lang/en-US';
+import enUS from '@ydui/ydui/dist/locales/lang/en-US';
 
-Vue.use(NutUI, {
+Vue.use(YdUI, {
   locale: 'en-US',
   lang: enUS
 });
@@ -20,13 +20,13 @@ Vue.use(NutUI, {
 
 ### 按需引用组件
 
-通过 **[@nutui/babel-plugin-seperate-import](https://www.npmjs.com/package/@nutui/babel-plugin-separate-import)** 插件，我们可以根据项目需要引用 NutUI 的组件，最终只打包引用的组件，减少引入代码的体积。国际化功能同样支持按需引用的方式。
+通过 **[@nutui/babel-plugin-seperate-import](https://www.npmjs.com/package/@nutui/babel-plugin-separate-import)** 插件，我们可以根据项目需要引用 YdUI 的组件，最终只打包引用的组件，减少引入代码的体积。国际化功能同样支持按需引用的方式。
 
 ```javascript
 import Vue from 'vue';
-import {locale} from '@nutui/nutui';
+import {locale} from '@ydui/ydui';
 
-import enUS from '@nutui/nutui/dist/locales/lang/en-US';
+import enUS from '@ydui/ydui/dist/locales/lang/en-US';
 
 locale('en-US', enUS);
 ```
@@ -49,7 +49,7 @@ locale('en-US', enUS);
 
 ```javascript
 import VueI18n from 'vue-i18n';
-import enUS from '@nutui/nutui/dist/locales/lang/en-US';
+import enUS from '@ydui/ydui/dist/locales/lang/en-US';
 
 Vue.use(VueI18n);
 
@@ -71,32 +71,32 @@ const app = new Vue({
 
 ## 语言切换
 
-使用 **vue-i18n** 时，可以通过调用 **$t** 方法来对某个位置做国际化支持的语言切换。我们也可以调用 NutUI 内置的语言切换方法 **nutTranslate** 来实现相同功能，而且还支持非常灵活的模板化传参方式。我们可以通过 **mixin** 将该语言切换方法混入到每个组件的 **methods**，方便直接调用。
+使用 **vue-i18n** 时，可以通过调用 **$t** 方法来对某个位置做国际化支持的语言切换。我们也可以调用 YdUI 内置的语言切换方法 **ydTranslate** 来实现相同功能，而且还支持非常灵活的模板化传参方式。我们可以通过 **mixin** 将该语言切换方法混入到每个组件的 **methods**，方便直接调用。
 
 ```javascript
 import Vue from 'vue';
-import {i18n} from '@nutui/nutui';
+import {i18n} from '@ydui/ydui';
 
 Vue.mixin({
     methods: {
-        nutTranslate() {
+        ydTranslate() {
             return i18n.apply(this, arguments);
         }
     }
 });
 
 
-// 使用 nutTranslate
+// 使用 ydTranslate
 // params 参数支持默认值、对象、数组、函数等格式
-<nut-cell :title="nutTranslate('demo.cell.title', params)" />
+<yd-cell :title="ydTranslate('demo.cell.title', params)" />
 ```
 
 一般来说，要实现全面的国际化，我们还需要将用户自己的语言包与组件库的语言包进行合并。
 
 ```javascript
 import Vue from 'vue';
-import {locale} from '@nutui/nutui';
-import enUS from '@nutui/nutui/dist/locales/lang/en-US';
+import {locale} from '@ydui/ydui';
+import enUS from '@ydui/ydui/dist/locales/lang/en-US';
 import myEnUS from './path/to/lang/en-US';
 
 Object.assign(enUS, myEnUS);
