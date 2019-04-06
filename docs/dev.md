@@ -31,12 +31,33 @@ this.$dialog(options);
 ```
 通过scoped属性的确能达到给组件样式设置作用域的目的，基本能避免组件内的样式影响外部，但是它也带来了另外一个问题，就是给外部覆盖内部样式带来了不便。无论组件功能多么通用，接口多么灵活，只要涉及到UI，就难免无法满足所有项目样式需求，所以应该允许在具体的项目中根据需要覆盖组件部分甚至全部样式。而scoped随机生成属性名提高了覆盖样式的难度。
 
-经过权衡，在组件里移除了scoped属性，改用class策略来避免组件内样式影响外部。当然，scoped属性也不是没有存在的意义，它更适合在具体应用中使用，对于复用性高的组件来说，不是最佳选择。
-
+经过权衡，在组件里移除了scoped属性，改用class策略来避免组件内样式影响外部, 如下。当然，scoped属性也不是没有存在的意义，它更适合在具体应用中使用，对于复用性高的组件来说，不是最佳选择。
+```scss
+.yd-toast {
+    position: fixed;
+    left: 0;
+    bottom: 150px;
+    width: 100%;
+    text-align: center;
+    pointer-events: none;
+    z-index: 9999;
+    font-family: $font-family;
+    &.yd-toast-small {
+        .yd-toast-inner {
+            font-size: $font-size-small;
+        }
+    }
+    &.yd-toast-large {
+        .yd-toast-inner {
+            font-size: $font-size-large;
+        }
+    }
+}
+```
 
 ## 图标
 SVG更适合移动端组件库
-### ICON FONTh和SVG
+### ICON FONT 和 SVG
 - SVG虽在PC端个别古董浏览器中兼容较差，但在移动端兼容良好
 - ICON FONT被认为是文本，所以一些浏览器会对其进行抗锯齿处理，这可能导致图标不那么锐利，清晰度打折扣
 - SVG样式控制比ICON FONT更灵活，甚至可以控制图标各个部分的颜色，实现彩色图标。而这对ICON FONT来说是不可能实现的
