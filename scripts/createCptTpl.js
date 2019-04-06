@@ -200,7 +200,8 @@ function createDir() {
         }
     });
     // 添加跳转链接到introduce.md
-    const data = `\r\n\r\n- [${newCpt.chnName}${newCpt.name}---${newCpt.desc}](../src/packages/${nameLc}/doc.md)`
+    const docUrl = `[${newCpt.chnName}${newCpt.name}---${newCpt.desc}](../src/packages/${nameLc}/doc.md)`
+    const data = `| ${newCpt.name} | ${newCpt.chnName} | ${newCpt.author} | ${newCpt.desc} | ${sorts[newCpt.sort]} | ${docUrl} |`
     fs.appendFile(path.join(__dirname, '../docs/introduce.md'), data, function (err) {
         if (err) {
             console.log(err)
