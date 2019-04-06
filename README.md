@@ -6,13 +6,21 @@
 
 ### 组件目录说明
 |
+
 |——__test__
+
 |      |
+
 |     index.test.js   自动化测试文件，执行`npm run test`将会调用该文件
+
 |
+
 |—— textbox.vue        组件vue文件
+
 |—— textbox.scss       组件引入的样式 
+
 |—— doc.md             组件文档
+
 |—— demo.vue           组件的demo页面，执行`npm run dev`后，点击对应组件会跳转到对应的demo页面
 
 ### 打包
