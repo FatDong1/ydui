@@ -1,14 +1,14 @@
-# 快速上手
-
-## 开发组件的步骤
+## 开发组件
 1. `npm run dev`打开demo展示主页
-2. `npm run add`添加组件，并录入参数
+2. `npm run add`添加组件，并录入参数，自动生成组件目录
 
 ## 打包
 `npm run build`
 
 ## 测试
 `npm run test`
+
+
 
 ## 页面直接引用
 
