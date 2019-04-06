@@ -91,6 +91,26 @@
       "sort": "0",
       "showDemo": true,
       "author": "sdfa"
+    },
+    {
+      "version": "1.0.0",
+      "name": "TASDS",
+      "chnName": "ASDF",
+      "desc": "ASDFASD",
+      "type": "component",
+      "sort": "0",
+      "showDemo": true,
+      "author": ""
+    },
+    {
+      "version": "1.0.0",
+      "name": "Fsad",
+      "chnName": "asdf",
+      "desc": "asdf",
+      "type": "component",
+      "sort": "0",
+      "showDemo": true,
+      "author": "sadf"
     }
   ]
 }

@@ -4,3 +4,7 @@
 [asdfaAasd---asdfasdf](../src/packages/aasd/doc.md)
 
 [asdfasdPasdfas---asdfasdf](../src/packages/pasdfas/doc.md)
+
+- [ASDFTASDS---ASDFASD](../src/packages/tasds/doc.md)
+
+- [asdfFsad---asdf](../src/packages/fsad/doc.md)
