@@ -84,7 +84,7 @@
     "jest-serializer-vue": "2.0.2",
     "jsdom": "13.0.0",
     "jsdom-global": "3.0.2",
-    "marked": "0.5.1",
+    "marked": "1.1.1",
     "mini-css-extract-plugin": "0.4.1",
     "mocha": "5.2.0",
     "mocha-webpack": "2.0.0-beta.0",
